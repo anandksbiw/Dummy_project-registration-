@@ -4,17 +4,20 @@ from  . import  models
 
 
 
+class UserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    class Meta():
+        model = User
+        fields = ('username','email','password')
+
+
 class UserProfileInfoForm(forms.ModelForm):
 
     class Meta():
         model = models.UserProfileInfo
-        fields = ('user','name','address','profile_pic','resume')
+        fields = ('name','address','profile_pic','resume')
 
 
-# class UserForm(forms.ModelForm):
-#     password = forms.CharField(widget=forms.PasswordInput())
-#
-#     class Meta():
-#         model = User
-#         fields = ('username','email','password')
-#
+
+

@@ -5,6 +5,12 @@
     <title>Title</title>
 </head>
 <body>
+    <h1>Profile Of {{user.username}}</h1>
+    <br><p>{{user.email}}</p>
+    <br><p>{{profile.name}}</p>
+<br><p>{{profile.address}}</p>
+
+<p><a href="{% url 'form_app:logout'%}">Logout</a></p>
 
 </body>
 </html>

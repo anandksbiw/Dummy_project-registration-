@@ -70,6 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'DummyProject.wsgi.application'
 
+MEDIA_DIR = os.path.join(BASE_DIR,'media')
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -100,6 +101,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#
+# PASSWORD_HASHERS = [
+#     # 'myproject.hashers.MyPBKDF2PasswordHasher',
+#     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+#     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+#     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+#     'django.contrib.auth.hashers.BCryptPasswordHasher',
+#     'django.contrib.auth.hashers.SHA1PasswordHasher',
+#     'django.contrib.auth.hashers.MD5PasswordHasher',
+#     'django.contrib.auth.hashers.CryptPasswordHasher',
+# ]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
@@ -119,3 +132,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL ='/media/'
