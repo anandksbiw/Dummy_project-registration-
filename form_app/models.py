@@ -12,5 +12,8 @@ class UserProfileInfo(models.Model):
     def __str__(self):
         return self.name
 
+class librarydue(models.Model):
+    roll=models.CharField(primary_key=True,max_length=20)
+    dues=models.IntegerField()
 
 

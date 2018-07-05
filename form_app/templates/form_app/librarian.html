@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <h1>Upload library dues file</h1>
+
+
+  <form action="{%url 'form_app:uploaded'%}" method="POST"  enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="file">
+    <button type="submit">Upload</button>
+  </form>
+
+</head>
+<body>
+
+</body>
+</html>

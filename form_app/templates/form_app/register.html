@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <h2>Register Here</h2>
 
-    <form action="{% url 'form_app:save' %}"method="POST">
+    <form action="{% url 'form_app:save' %}"method="POST" >
         {% csrf_token %}
         {{user_form.as_p}}
         {{ profile_form.as_p }}
+
         <input type="submit" value="register">
 
     </form>

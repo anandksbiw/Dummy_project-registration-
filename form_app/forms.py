@@ -19,5 +19,6 @@ class UserProfileInfoForm(forms.ModelForm):
         fields = ('name','address','profile_pic','resume')
 
 
-
+class UploadForm(forms.Form):
+    file=forms.FileField()
 
