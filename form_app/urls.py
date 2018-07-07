@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,include
 from . import views
 
 app_name = 'form_app'
@@ -11,5 +11,7 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('logout/', views.user_logout, name='logout'),
     path('librarian/', views.librarian, name='librarian'),
-    path('uploaded/', views.uploaded, name='uploaded')
+    path('uploaded/', views.uploaded, name='uploaded'),
+
+
 ]

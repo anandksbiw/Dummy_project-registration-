@@ -49,7 +49,7 @@ def profile(request):
     if request.method == 'POST':
         username = request.POST['id']
         password = request.POST['password']
-        print(username + ' password ' + password)
+        # print(username + ' password ' + password)
         user = authenticate(request, username=username, password=password)
         if user is not None:
             if user.is_active:
@@ -57,7 +57,7 @@ def profile(request):
                 #
                 a = User.objects.get(username=username)
                 b = UserProfileInfo.objects.get(user=a.id)
-                print(b)
+                # print(b)
                 context = {'user': a, 'profile': b}
                 return render(request, 'form_app/profile.html', context)
             else:
@@ -66,6 +66,10 @@ def profile(request):
             return HttpResponse('Invalid details')
     else:
         return render(request, 'form_app/login.html')
+
+
+
+
 
 
 @login_required
@@ -81,8 +85,6 @@ def librarian(request):
     upload_form = UploadForm()
     context = {'upload': upload_form}
     return render(request, 'form_app/librarian.html', context)
-
-
 
 
 def uploaded(request):
