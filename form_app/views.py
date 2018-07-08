@@ -115,3 +115,24 @@ def uploaded(request):
     # # if not result.has_errors():
     # #     person_resource.import_data(dataset, dry_run=False)  # Actually import now
     return render(request, 'form_app/home.html')
+
+
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return render(request, 'form_app/home.html')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'form_app/change_password.html', {
+        'form': form
+    })
