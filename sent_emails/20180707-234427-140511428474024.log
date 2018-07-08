@@ -1,0 +1,23 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: TestSite password reset
+From: webmaster@localhost
+To: anandksbiw@gmail.com
+Date: Sat, 07 Jul 2018 23:44:27 -0000
+Message-ID: <153100706713.12589.9802536446129474340@Aspire-E5-571>
+
+
+To initiate the password reset process for your qwerty TestSite Account,
+click the link below:
+
+http://127.0.0.1:8000/form_app/reset/OA/4xo-3e72e72bfd477b6d0864/
+
+If clicking the link above doesn't work, please copy and paste the URL in a new browser
+window instead.
+
+Sincerely,
+The TestSite Team
+
+
+-------------------------------------------------------------------------------
